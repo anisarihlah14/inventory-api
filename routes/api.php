@@ -1,15 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\ItemController;
+use App\Http\Controllers\GenreController;
+use App\Http\Controllers\BookController;
 
-Route::get('/test', function () {
-    return response()->json([
-        'message' => 'API berhasil',
-        'status' => 200
-    ]);
-});
-
-Route::apiResource('categories', CategoryController::class);
-Route::apiResource('items', ItemController::class);
+Route::apiResource('genres', GenreController::class);
+Route::apiResource('books', BookController::class);
